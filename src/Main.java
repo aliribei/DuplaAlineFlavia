@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int num1, num2, num3, num4, resposta;
+        int num1, num2, num3, num4, res1, res2, res3, res4;
         double respostaMedia;
 
         cabecalho();
@@ -16,11 +16,19 @@ public class Main {
         num3 = ler_numero("Digite o primeiro número: ");
         num4 = ler_numero("Digite o segundo número: ");
         
-        resposta = somar(num1, num2);
+        res1 = somar(num1, num2);
+        res2 = somar(res1, num3);
+        res3 = somar(res2, num1);
+        res4 = somar(res3, num4);
+        
         respostaMedia = media(num1, num2, num3, num4);
         
-        System.out.printf("Resultado soma: %d ", resposta);
-        System.out.printf("Resultado média: %.2f ", respostaMedia);
+        System.out.printf("\nResultado soma1: %d  ", res1);
+        System.out.printf("\nResultado soma2: %d  ", res2);
+        System.out.printf("\nResultado soma3: %d  ", res3);
+        System.out.printf("\nResultado soma4: %d  ", res4);
+
+        System.out.printf("\nResultado média: %.2f ", respostaMedia);
 
     }
 
@@ -45,9 +53,6 @@ public class Main {
         double resultado =  soma / 4;
         return resultado;
     }
-
-
-
 
 }
 
