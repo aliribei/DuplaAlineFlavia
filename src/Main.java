@@ -13,8 +13,8 @@ public class Main {
         cabecalho();
         num1 = ler_numero("Digite o primeiro número: ");
         num2 = ler_numero("Digite o segundo número: ");
-        num3 = ler_numero("Digite o primeiro número: ");
-        num4 = ler_numero("Digite o segundo número: ");
+        num3 = ler_numero("Digite o terceiro número: ");
+        num4 = ler_numero("Digite o quarto número: ");
         
         res1 = somar(num1, num2);
         res2 = somar(res1, num3);
