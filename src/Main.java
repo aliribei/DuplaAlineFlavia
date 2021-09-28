@@ -1,10 +1,27 @@
-public class Main {
-    public static void main(String[] args) {
-        cabecalho();
+import java.util.Scanner;
 
-        int resposta = somar(2, 2);
+public class Main {
+
+    private static Scanner sc;
+
+    public static void main(String[] args) {
+        int num1, num2, resposta;
+
+        cabecalho();
+        num1 = ler_numero("Digite o primeiro número: ");
+        num2 = ler_numero("Digite o segundo número: ");
+        
+        resposta = somar(num1, num2);
+        
         System.out.printf("Resultado soma: %d ", resposta);
 
+    }
+
+    static int ler_numero(String mensagem){
+        sc = new Scanner (System.in);
+        System.out.println(mensagem);
+        int numero = Integer.parseInt(sc.nextLine());
+        return numero;
     }
     
     static void cabecalho(){
